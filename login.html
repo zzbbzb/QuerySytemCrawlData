@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="./layui/css/layui.css" />
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <div class="container">
+        
+      <div class="card">
+        <div class="title_item">
+            <h1>登录系统</h1>
+        </div>
+        <hr>
+        <div class="form-box">
+          <form class="layui-form form_item" action="">
+            <div class="layui-form-item">
+              <div class="layui-input-block btn_block">
+                <label class="login_label">用户名:</label>
+                <!-- <label class="error_item">用户或密码错误</label> -->
+              </div>
+              <div class="layui-input-block btn_block">
+                <input
+                  type="text"
+                  name="title"
+                  required
+                  lay-verify="required"
+                  placeholder="请输入用户名"
+                  autocomplete="off"
+                  class="layui-input"
+                />
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <div class="layui-input-block btn_block">
+                <label class="login_label">密码框:</label>
+              </div>
+              <div class="layui-input-block btn_block">
+                <input
+                  type="password"
+                  name="password"
+                  required
+                  lay-verify="required"
+                  placeholder="请输入密码"
+                  autocomplete="off"
+                  class="layui-input"
+                />
+              </div>
+              <!-- <div class="layui-form-mid layui-word-aux">辅助文字</div> -->
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block btn_block verify_before_margin">
+                 
+                </div>
+                <div class="layui-input-block btn_block verify_input">
+                  <input
+                    type="verifycode"
+                    name="verifycode"
+                    required
+                    lay-verify="required"
+                    placeholder="请输入验证码"
+                    autocomplete="off"
+                    class="layui-input"
+                  />
+                </div>
+                <div>
+                    <!-- <img src="" alt=""> -->
+                </div>
+              </div>
+            <div class="layui-form-item form-box btn_box">
+              <div class="layui-input-block btn_block btn-item">
+                <button class="layui-btn btn" lay-submit lay-filter="formDemo">
+                  登录
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="../layui/layui.all.js"></script>
+    <script>
+      //Demo
+      layui.use("form", function () {
+        var form = layui.form;
+
+        //监听提交
+        form.on("submit(formDemo)", function (data) {
+          layer.msg(JSON.stringify(data.field));
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>

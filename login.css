@@ -1,0 +1,105 @@
+
+.login_label
+{
+    /* display: block; */
+    padding: 9px 30px 9px 0px;
+    width: 80px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+
+.error_item
+{
+   float: right;
+   clear: both;
+   color: red;
+   /* padding: 9px 30px 9px 0px; */
+   font-weight: 400;
+   line-height: 20px;
+   min-height: 36px;
+}
+
+hr{
+    width: 90%;
+}
+
+.verify_input
+{
+    width: 60%;
+}
+
+.card
+{
+    min-width: 600px;
+    min-height: 580px;
+    width: 40%;
+    height: 60%;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 6px 1px #888888;
+}
+
+.verify_before_margin
+{
+    min-height: 10px;
+}
+
+.title_item
+{
+    margin: 20px;
+}
+
+.form_item
+{
+    min-width: 60%;
+}
+
+.btn_block
+{
+    margin-left: 0px;
+}
+
+.layui-form-item
+{
+    margin-top: 40px;
+}
+
+.btn-item
+{
+    width: 100%;
+}
+
+.btn
+{
+    width: 100%;
+}
+
+.form-box
+{
+    min-width: 100%;
+    display: flex;
+    justify-content:  center;
+    margin-bottom: 5vh;
+}
+
+.container
+{
+    height: 100vh;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.layui-form-item
+{
+    margin-top: 3vh;
+}
+
+.btn_box
+{
+    margin-top: 6vh;
+}
