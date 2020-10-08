@@ -1,0 +1,50 @@
+{
+    "errorNo": 0,
+    "errorInfo": "",
+    "data": {
+        "pageNum": 1,
+        "pageSize": 10,
+        "total": 1,
+        "list": [{
+            "cuserid": "0",
+            "userCode": "11",
+            "userName": "zb",
+            "creationtime": "123213213",
+            "creator": "",
+            "abledate": "",
+            "disabledate": "1111111",
+            "phone": "1234567890",
+            "email": "",
+            "enablestate": "",
+            "islocked": "",
+            "modifiedtime": "",
+            "modifier": "",
+            "pkOrgs": "",
+            "userNote": "",
+            "userPassword": "",
+            "userType": "1",
+            "ratepassword": ""
+        },
+        {
+            "cuserid": "0",
+            "userCode": "12",
+            "userName": "admin",
+            "creationtime": "123213213",
+            "creator": "",
+            "abledate": "",
+            "disabledate": "2222222",
+            "phone": "1234567890",
+            "email": "",
+            "enablestate": "",
+            "islocked": "",
+            "modifiedtime": "",
+            "modifier": "",
+            "pkOrgs": "",
+            "userNote": "",
+            "userPassword": "",
+            "userType": "1",
+            "ratepassword": ""
+        }]
+    }
+
+}
