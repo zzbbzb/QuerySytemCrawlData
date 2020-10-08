@@ -489,6 +489,8 @@ layui.define(['layer',"fsCommon","form",'laydate',"fsConfig",'layedit'], functio
 				formDom.attr("isLoad","0");
 				formDom.find("button.fsEdit").hide();
 				formDom.find("button:not(.fsEdit)").show();
+				formDom.find("input.fsEdit").hide();
+				formDom.find("input:not(.fsEdit)").show();
 				//只读处理
 				formDom.find("input.fsAddReadonly").addClass("layui-disabled").attr("disabled","disabled");
 				formDom.find("select.fsAddReadonly,textarea.fsAddReadonly").attr("disabled","disabled");
@@ -496,6 +498,10 @@ layui.define(['layer',"fsCommon","form",'laydate',"fsConfig",'layedit'], functio
 				formDom.attr("isLoad","1");
 				formDom.find("button.fsAdd").hide();
 				formDom.find("button:not(.fsAdd)").show();
+				formDom.find("input.fsAdd").hide();
+				formDom.find("input:not(.fsAdd)").show();
+				formDom.find("input.fsAdd").attr("lay-verify","none");
+
 				//只读处理
 				formDom.find("input.fsEditReadonly").addClass("layui-disabled").attr("disabled","disabled");
 				formDom.find("select.fsEditReadonly,textarea.fsEditReadonly").attr("disabled","disabled");

@@ -19,6 +19,60 @@
   <script type="text/javascript" src="../../plugins/frame/js/main.js"></script>
 </head>
 <body>
-    <p>修改信息</p>
+    	<div class="layui-fluid">
+
+		<form class="layui-form" id="edit_user_form" loadUrl="">
+			<input type="hidden" name="id" />
+			<!-- <div class="layui-form-item">
+				<label class="layui-form-label">用户名</label>
+				<div class="layui-input-block">
+					<input type="text" name="userName" required="" lay-verType="tips" lay-verify="required"
+						placeholder="请输入用户名" autocomplete="off" class="layui-input" />
+				</div>
+			</div> -->
+			<div class="layui-form-item">
+				<label class="layui-form-label">密码框</label>
+				<div class="layui-input-block">
+					<input type="password" name="password"  placeholder="请输入密码"
+						autocomplete="off" class="layui-input">
+				</div>
+			</div>
+			<!-- <div class="layui-form-item">
+				<label class="layui-form-label">失效时间</label>
+				<div class="layui-input-inline">
+					<input type="text" name="disabledate" lay-verify="required" lay-verType="tips" autocomplete="off"
+						class="layui-input fsDate" dateType="datetime" />
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">权限</label>
+				<div class="layui-input-block">
+					<select name="userType" lay-verify="required">
+						<option value=""></option>
+						<option value="0">普通用户</option>
+						<option value="1">管理员</option>
+					</select>
+				</div>
+			</div> -->
+			<div class="layui-form-item">
+				<label class="layui-form-label">手机号码</label>
+				<div class="layui-input-block">
+					<input type="text" name="phone" required="" lay-verType="tips" lay-verify="required"
+						placeholder="请输入手机号码" autocomplete="off" class="layui-input" />
+				</div>
+			</div>
+			<hr />
+			<div class="layui-form-item" style="text-align: center;">
+				<!-- <button class="layui-btn fsAdd" lay-submit="" lay-filter="save" url="/servlet/DEMO1002">新增</button> -->
+				<button class="layui-btn" lay-submit="" lay-filter="edit" url="/servlet/DEMO1005">编辑</button>
+
+				<!--      	  <button class="layui-btn" lay-submit="" lay-filter="save" url="/servlet/DEMO1007">保存</button> -->
+
+				<button type="button" class="layui-btn layui-btn-primary" function="close">关闭</button>
+			</div>
+	</div>
+	</form>
+
+	</div>
 </body>
 </html>

@@ -23,7 +23,7 @@ layui.define(['element',"fsConfig","fsCommon"], function(exports){
 				{"menuId":"1","menuName":"","menuIcon":"","menuHref":"","parentMenuId": 0},
 				{"menuId":"11","menuName":"基本功能","menuIcon":"","menuHref":"","parentMenuId":1},
 				{"menuId":"12","menuName":"管理员","menuIcon":"","menuHref":"","parentMenuId":"1"},
-				{"menuId":"13","menuName":"个人中心","menuIcon":"","menuHref":"","parentMenuId":"1"},
+				// {"menuId":"13","menuName":"个人中心","menuIcon":"","menuHref":"","parentMenuId":"1"},
 
 				// {"menuId":"111","menuName":"首页","menuIcon":"&#xe68e;","menuHref":"views/home/index.html","parentMenuId":"11"},
 				{"menuId":"singleSearch","menuName":"单个查询","menuIcon":"","menuHref":"views/singleSearch/index.html","parentMenuId":"11"},
@@ -31,7 +31,7 @@ layui.define(['element',"fsConfig","fsCommon"], function(exports){
 				{"menuId":"autoSearch","menuName":"自动查询","menuIcon":"","menuHref":"views/autoSearch/index.html","parentMenuId":"11"},
 				{"menuId":"inputData","menuName":"导入数据","menuIcon":"","menuHref":"views/inputData/index.html","parentMenuId":"11"},
 				{"menuId":"userDataManage","menuName":"用户管理","menuIcon":"","menuHref":"views/userDataManage/index.html","parentMenuId":"12"},
-				{"menuId":"userPersonalData","menuName":"修改信息","menuIcon":"","menuHref":"views/userPersonalData/index.html","parentMenuId":"13"}
+				// {"menuId":"userPersonalData","menuName":"修改信息","menuIcon":"","menuHref":"views/userPersonalData/index.html","parentMenuId":"13"}
 				
 				// {"menuId":"1","menuName":"控制台","menuIcon":"fa-cog","menuHref":"","parentMenuId":0},
 				// {"menuId":"2","menuName":"测试","menuIcon":"","menuHref":"","parentMenuId":0},

@@ -7,15 +7,23 @@
     <link rel="stylesheet" href="./plugins/layui/css/layui.css" />
     <link rel="stylesheet" href="./css/login.css" />
     <script src="./plugins/layui/layui.all.js"></script>
+    <script type="text/javascript" src="/plugins/jquery/jquery.min.js"></script>
+    <link
+      href="/plugins/contextMenu/jquery.contextMenu.min.css"
+      rel="stylesheet"
+    />
+    <script src="/plugins/contextMenu/jquery.contextMenu.min.js"></script>
+    <script type="text/javascript" src="/plugins/frame/js/fsDict.js"></script>
+    <script type="text/javascript" src="/plugins/frame/js/fs.js"></script>
+    <script type="text/javascript" src="/plugins/frame/js/main.js"></script>
   </head>
   <body>
     <div class="container">
-        
       <div class="card">
         <div class="title_item">
-            <h1>登录系统</h1>
+          <h1>登录系统</h1>
         </div>
-        <hr>
+        <hr />
         <div class="form-box">
           <form class="layui-form form_item" action="">
             <div class="layui-form-item">
@@ -53,25 +61,26 @@
               <!-- <div class="layui-form-mid layui-word-aux">辅助文字</div> -->
             </div>
 
-            <div class="layui-form-item">
-                <div class="layui-input-block btn_block verify_before_margin">
-                 
-                </div>
-                <div class="layui-input-block btn_block verify_input">
-                  <input
-                    type="verifycode"
-                    name="verifycode"
-                    required
-                    lay-verify="required"
-                    placeholder="请输入验证码"
-                    autocomplete="off"
-                    class="layui-input"
-                  />
-                </div>
-                <div>
-                    <!-- <img src="" alt=""> -->
-                </div>
+            <div class="layui-form-item verify_item">
+              <div
+                class="layui-input-block btn_block verify_before_margin"
+              ></div>
+              <div class="layui-input-block btn_block verify_input">
+                <input
+                  type="verifycode"
+                  name="verifycode"
+                  required
+                  lay-verify="required"
+                  placeholder="请输入验证码"
+                  autocomplete="off"
+                  class="layui-input"
+                />
               </div>
+
+              <div class="captcha-img">
+                <img id="captchaPic" src="" />
+              </div>
+            </div>
             <div class="layui-form-item form-box btn_box">
               <div class="layui-input-block btn_block btn-item">
                 <button class="layui-btn btn" lay-submit lay-filter="formDemo">
@@ -86,12 +95,58 @@
 
     <script>
       //Demo
-      layui.use("form", function () {
+      layui.use(["form", "layer", "fsConfig"], function () {
         var form = layui.form;
+        var layer = layui.layer;
+        var fsConfig = layui.fsConfig;
+        var t = Math.random();
+
+        var serverUrl = $.result(fsConfig, "global.servletUrl", "");
+        console.log("serverUrl=", serverUrl);
+        var verifyUrl = serverUrl + "/genCaptcha";
+        $("#captchaPic")[0].src = "" + verifyUrl + "?t= " + t;
+
+        //更换验证码
+        $("#captchaPic").on("click", function () {
+          t = Math.random();
+          $("#captchaPic")[0].src = "" + verifyUrl + "?t= " + t;
+          layer.msg("换验证码");
+        });
 
         //监听提交
         form.on("submit(formDemo)", function (data) {
           layer.msg(JSON.stringify(data.field));
+
+          // $.post({
+          //   url: loginUrl,
+          //   data: data.field,
+          //   dataType: "json",
+          //   timeout: 300000,
+          //   xhrFields: { withCredentials: true },
+          //   success: function (res) {
+          //     layer.close(loadIndex);
+
+          //     if (res.success) {
+          //       layui.sessionData("loginUserData", {
+          //         key: "loginUser",
+          //         value: res.data.user,
+          //       });
+
+          //       layer.msg(
+          //         res.message,
+          //         function (index) {
+          //           window.location = "../index.html";
+          //         },
+          //         5000
+          //       );
+          //     } else {
+          //       layer.msg(res.message);
+          //       $("#captchaPic").click();
+          //     }
+          //   },
+          //   error: function () {},
+          // });
+
           return false;
         });
       });
